@@ -38,9 +38,16 @@
       "default",
       {
         "ignore": [
-          "user-select"
+          "user-select",
+          "backdrop-filter"
         ]
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 17.6",
+    "not safari <= 17.5"
+  ]
 }
