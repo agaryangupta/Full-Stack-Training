@@ -21,3 +21,10 @@ const myserver=http.createServer((req,res)=>{
 myserver.listen(8000,(req,res)=>{
     console.log("server is running on port 8000");
 })
+const fs=require('fs');
+fs.writeFileSync("./it-a.txt","we are student of i.t-a class");
+
+fs.writeFileSync("./abes.txt","we are student of abes");
+
+const result=fs.readFileSync("./it-a.txt","utf-8");
+console.log(result);
