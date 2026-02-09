@@ -28,3 +28,5 @@ fs.writeFileSync("./abes.txt","we are student of abes");
 
 const result=fs.readFileSync("./it-a.txt","utf-8");
 console.log(result);
+
+fs.writeFile("./abe.txt","we are student of abes",() => {});
