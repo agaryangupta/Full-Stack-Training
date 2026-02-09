@@ -30,3 +30,12 @@ const result=fs.readFileSync("./it-a.txt","utf-8");
 console.log(result);
 
 fs.writeFile("./abe.txt","we are student of abes",() => {});
+
+fs.writeFile("./abe.txt","we are student of abes",(err, result) => {
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log(result);
+    }
+});
