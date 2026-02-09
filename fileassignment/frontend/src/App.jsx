@@ -32,28 +32,36 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1>FS Model for Node</h1>
-
-      {/* Text Box */}
-      <textarea
-        placeholder="Enter text here"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      ></textarea>
-
-      {/* Buttons */}
-      <div className="btn-group">
-        <button onClick={handleWrite}>FS Create / Write</button>
-        <button onClick={handleRead}>FS Read</button>
+    <>
+      {/* Navbar */}
+      <div className="navbar">
+        <div className="nav-left">
+          <img src="/logo.png" alt="College Logo" />
+          <span>Home</span>
+        </div>
       </div>
 
-      {/* ⭐ Output Area */}
-      <div className="output">
-        <h3>Output:</h3>
-        <p>{output}</p>
+      {/* Main Content */}
+      <div className="container">
+        <h1>FS Model for Node</h1>
+
+        <textarea
+          placeholder="Enter text here"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></textarea>
+
+        <div className="btn-group">
+          <button onClick={handleWrite}>FS Create / Write</button>
+          <button onClick={handleRead}>FS Read</button>
+        </div>
+
+        <div className="output">
+          <h3>Output:</h3>
+          <p>{output}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
