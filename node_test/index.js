@@ -74,3 +74,5 @@ fs.cp("./a5.txt","./a6.txt",(error, result)=>{
         console.log(result);
     }
 });
+
+fs.unlinkSync("./a1.txt");
