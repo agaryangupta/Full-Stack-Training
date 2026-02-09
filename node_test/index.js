@@ -39,3 +39,16 @@ fs.writeFile("./abe.txt","we are student of abes",(err, result) => {
         console.log(result);
     }
 });
+
+fs.appendFileSync(".abes.txt","We are happy");
+
+fs.appendFile(".abes.txt","We are happy",()=>{});
+
+fs.appendFile(".abes.txt","We are happy",(err, result)=>{
+    if(err){
+        console.log(err);
+    }       
+    else{
+        console.log(result);
+    }
+});
