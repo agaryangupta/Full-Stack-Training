@@ -52,3 +52,25 @@ fs.appendFile(".abes.txt","We are happy",(err, result)=>{
         console.log(result);
     }
 });
+
+fs.writeFileSync("./a1.txt","I am great");
+fs.writeFileSync("./a2.txt","");
+
+fs.writeFileSync("./a3.txt","I am great");
+fs.writeFileSync("./a4.txt","");
+
+fs.writeFileSync("./a5.txt","I am great");
+fs.writeFileSync("./a6.txt","");
+
+fs.cpSync("./a1.txt","./a2.txt");
+
+fs.cp("./a3.txt","./a4.txt",()=>{});
+
+fs.cp("./a5.txt","./a6.txt",(error, result)=>{
+    if(error){
+        console.log(error);
+    }       
+    else{
+        console.log(result);
+    }
+});
