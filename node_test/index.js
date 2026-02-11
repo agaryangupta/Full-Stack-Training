@@ -79,4 +79,8 @@
 
 const os = require('os');
 console.log('playform:', os.platform());
+console.log('architecture:', os.arch());
 console.log('info:', os.userInfo());
+console.log('version:', os.version());
+console.log('cpu:', os.cpus());
+console.log('free memory:', os.freemem());
