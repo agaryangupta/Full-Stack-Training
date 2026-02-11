@@ -78,9 +78,12 @@
 // fs.unlinkSync("./a1.txt");
 
 const os = require('os');
-console.log('playform:', os.platform());
-console.log('architecture:', os.arch());
-console.log('info:', os.userInfo());
-console.log('version:', os.version());
-console.log('cpu:', os.cpus());
-console.log('free memory:', os.freemem());
+// console.log('playform:', os.platform());
+// console.log('architecture:', os.arch());
+// console.log('info:', os.userInfo());
+// console.log('version:', os.version());
+// console.log('cpu:', os.cpus());
+// console.log('free memory:', os.freemem());
+// console.log('total memory:', os.totalmem());
+console.log('uptime:', os.uptime());
+console.log('home directory:', os.homedir());
