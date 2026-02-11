@@ -91,6 +91,6 @@ const os = require('os');
 // console.log('uptime:', os.uptime());
 // console.log('home directory:', os.homedir());
 
-console.log('host name:', os.hostname());
-console.log('network interfaces:', os.networkInterfaces());
-console.log('temp directory:', os.tmpdir());
+// console.log('host name:', os.hostname());
+// console.log('network interfaces:', os.networkInterfaces());
+// console.log('temp directory:', os.tmpdir());
