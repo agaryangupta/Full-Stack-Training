@@ -1,0 +1,89 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.logo-img {
+  height: 50px;   /* Small logo in navbar */
+  width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Home Page */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 80px;
+}
+
+.home-container img {
+  max-width: 400px;   /* Bigger but not forced */
+  height: auto;       /* Keeps original ratio */
+  border-radius: 10px;
+}
+
+.home-container h2 {
+  font-size: 30px;
+}
+
+/* Work Page */
+.work-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #1f1f1f;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #00bcd4;
+}
+
+.result-box {
+  margin-top: 30px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border-radius: 10px;
+  overflow-x: auto;
+}
