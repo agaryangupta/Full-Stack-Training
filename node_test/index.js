@@ -79,3 +79,4 @@
 
 const os = require('os');
 console.log('playform:', os.platform());
+console.log('info:', os.userInfo());
