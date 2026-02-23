@@ -21,7 +21,8 @@
 // myserver.listen(8000,(req,res)=>{
 //     console.log("server is running on port 8000");
 // })
-// const fs=require('fs');
+
+const fs=require('fs');
 // fs.writeFileSync("./it-a.txt","we are student of i.t-a class");
 
 // fs.writeFileSync("./abes.txt","we are student of abes");
@@ -94,3 +95,18 @@ const os = require('os');
 // console.log('host name:', os.hostname());
 // console.log('network interfaces:', os.networkInterfaces());
 // console.log('temp directory:', os.tmpdir());
+
+const path = require('path');
+
+const filePath = path.join(__dirname, 'folder', 'data.txt');
+console.log("Joined Path:", filePath);
+
+path.extname('file.txt'); 
+path.basename('file.txt');
+path.dirname('/users/test/file.txt');
+path.parse('/users/test/file.txt');
+
+console.log("Extension:", path.extname('file.txt'));
+console.log("Basename:", path.basename('file.txt'));
+console.log("Dirname:", path.dirname('/users/test/file.txt'));
+console.log("Parsed:", path.parse('/users/test/file.txt'));
