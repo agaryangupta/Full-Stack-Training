@@ -56,6 +56,20 @@ app.get('/',(req,res)=>{
     }
 })
 
+app.get("/:id",(req,res)=>{
+    try{
+       const id=req.params.id;
+       const std=students.find(s=>s.id==id);
+       if(!std){
+           return res.status(404).json({message:"Student not found"})
+       }
+       res.status(200).json({message:"show student data",data: std})
+    }
+    catch(err){ 
+        res.status(500).json({message:"Data not found",error:err.message})
+    }
+})
+
 app.listen(port,()=>{
 console.log(`Server is running on port http://localhost:${port}`);
 })
