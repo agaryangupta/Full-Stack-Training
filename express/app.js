@@ -6,9 +6,9 @@ const port = 8000;
 
 // const upload = multer({ dest: 'uploads/' });
 
-app.get('/',(req,res)=>{
-    res.send('Hello World');
-});
+// app.get('/',(req,res)=>{
+//     res.send('Hello World');
+// });
 
 // app.get('/img', (req, res) => {
 //     res.send(`
@@ -37,6 +37,12 @@ app.get('/',(req,res)=>{
 const student = [{
     id:1,
     name: "Aryan",
+    age: 21,
+    course: "B.Tech"
+},
+{
+    id:2,
+    name: "Riya",
     age: 21,
     course: "B.Tech"
 }]
