@@ -24,7 +24,6 @@ app.post('/img', upload.single('image'), (req, res) => {
     if (!req.file) {
         return res.send("No file uploaded");
     }
-
     res.send("Image uploaded successfully!");
 });
 
