@@ -41,6 +41,14 @@ const student = [{
     course: "B.Tech"
 }]
 
+app.get('/',(req,res)=>{
+    try{
+        res.status(200).json({message : "Student Data", data: student});
+    }
+    catch(err){
+        res.status(500).json({message: "Internal Server Error", error:err.message});
+    }
+})
 
 app.listen(port,()=>{
 console.log(`Server is running on port http://localhost:${port}`);
