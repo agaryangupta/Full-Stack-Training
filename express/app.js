@@ -1,4 +1,6 @@
 const express = require('express');
+const multer  = require('multer')
+const path = require('path');
 const app = express();
 const port = 8000;
 
@@ -12,6 +14,10 @@ app.get('/about',(req,res)=>{
         <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" width="300" height="200"/> 
         `);
 });
+
+app.get('/img',()=>{
+    
+})
 
 app.listen(port,()=>{
 console.log(`Server is running on port http://localhost:${port}`);
