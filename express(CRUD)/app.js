@@ -50,6 +50,8 @@ app.post('/create', (req, res) => {
     res.status(201).json(newStudent);
 });
 
+//delete student by ID
+
 app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`);
 });
