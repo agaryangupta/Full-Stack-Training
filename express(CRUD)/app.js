@@ -8,6 +8,11 @@ const students = [
     { id: 2, name: 'Jane Smith', age: 22 }
 ];
 
+//data read
+app.get('/students', (req, res) => {
+    res.json(students);
+} );
+
 app.listen(port, () => {
     console.log(`Server is running on port https://localhost:${port}`);
 });
