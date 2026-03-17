@@ -88,3 +88,7 @@ app.delete('/delete/:id', (req, res) => {
         student: deletedStudent[0]
     });
 });
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
