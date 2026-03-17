@@ -50,8 +50,41 @@ app.post('/create', (req, res) => {
     res.status(201).json(newStudent);
 });
 
-//delete student by ID
+// Update student by ID
+app.put('/update/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const { name, age } = req.body;
 
-app.listen(port, () => {
-    console.log(`Server is running on port http://localhost:${port}`);
+    const studentIndex = students.findIndex(s => s.id === id);
+
+    if (studentIndex === -1) {
+        return res.status(404).json({ message: 'Student not found' });
+    }
+
+    // Update fields only if provided
+    if (name) students[studentIndex].name = name;
+    if (age) students[studentIndex].age = age;
+
+    console.log('Updated students:', students);
+    res.json(students[studentIndex]);
+});
+
+
+// Delete student by ID
+app.delete('/delete/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+
+    const studentIndex = students.findIndex(s => s.id === id);
+
+    if (studentIndex === -1) {
+        return res.status(404).json({ message: 'Student not found' });
+    }
+
+    const deletedStudent = students.splice(studentIndex, 1);
+
+    console.log('Updated students:', students);
+    res.json({
+        message: 'Student deleted successfully',
+        student: deletedStudent[0]
+    });
 });
