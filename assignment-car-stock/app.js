@@ -23,11 +23,33 @@ let cars = [
 ];
 
 let currentId = 15;
+// get total number of cars
+app.get('/cars-count', (req, res) => {
+    res.json({
+        totalCars: cars.length
+    });
+});
+
+// get total cars of a particular company
+app.get('/cars-count/:name', (req, res) => {
+    const name = req.params.name.toLowerCase();
+
+    const filteredCars = cars.filter(c => 
+        c.name.toLowerCase().includes(name)
+    );
+
+    res.json({
+        company: req.params.name,
+        totalCars: filteredCars.length
+    });
+});
 
 //get all cars
 app.get('/cars', (req, res) => {
     res.json(cars);
 });
+
+
 
 //get one car
 app.get('/cars/:id', (req, res) => {
